@@ -1,17 +1,9 @@
 # Getting all options from CheckBox Lists
 
-Stadium returns lists of options and SelectedOptions from Checkbox List controls, but sometimes you may want to get a list of all options back. This module provides a script that returns one list of selected and not selected options. 
+Stadium returns a list of all the Options and of the SelectedOptions from Checkbox List controls, but sometimes you may want to get a list of all options back
 
 https://github.com/stadium-software/checkbox-list-all-options/assets/2085324/46f203a4-f118-4d16-b2a5-d8763d2c7b7a
 
-## Type Setup
-1. Create a type and call it "CheckBoxItem"
-2. Add three properties to the type
-   1. text (any)
-   2. value (any)
-   3. checked (any)
-
-![](images/CheckboxType.png)
 
 ## Global Script Setup
 1. Create a Global Script and call it "FullCheckBoxList"
@@ -47,10 +39,23 @@ return all;
 4. Create the *Button.Click* event handler
 
 ## Button.Click Event Handler Setup
+The script can be executed in any other script. The example in this sample shows what the script returns and how to loop through it. 
+
 1. Drag the "FullCheckBoxList" script into the event script
 2. Populate the Input Parameters 
    1. SelectedOptions: Select the *SelectedOptions* property of your checkbox list in the dropdown
    2. Options: Select the *Options* property of your checkbox list in the dropdown
-3. Use the list returned by the script using a *ForEach* to get every checkbox object separately
+3. The script returns an array of objects called *AllOptions*. Suggestions for using the data
+   1. Assign the return value from the script *AllOptions* to a *Notification* action to see the entire result
+   2. Assign *AllOptions* to a List of type "CheckBoxItem" ([see below](#type-setup)) and use a *ForEach* to get every checkbox object separately
 
 ![](images/ScriptInputParameters.png)
+
+## Type Setup
+1. Create a type and call it "CheckBoxItem"
+2. Add three properties to the type
+   1. text (any)
+   2. value (any)
+   3. checked (any)
+
+![](images/CheckboxType.png)
