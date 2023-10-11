@@ -1,1 +1,54 @@
-# checkbox-list-all-options
+# Getting all options from CheckBox Lists
+
+Stadium returns lists of options and SelectedOptions from Checkbox List controls, but sometimes you may want to get a list of all options back. This module provides a script that returns one list of selected and not selected options. 
+
+## Type Setup
+1. Create a type and call it "CheckBoxItem"
+2. Add three properties to the type
+   1. text (any)
+   2. value (any)
+   3. checked (any)
+
+![](images/CheckboxType.png)
+
+## Global Script Setup
+1. Create a Global Script and call it "FullCheckBoxList"
+2. Add the two *Input Parameters* to the script
+   1. Options
+   2. SelectedOptions
+3. Add the *Output Parameter* below to the script
+   1. AllOptions
+4. Drag a *Javascript* action into the script 
+5. Paste the Javascript below into the *code* property (ignore the error "Invalid script was detected" in Stadium)
+```
+let options = ~.Parameters.Input.Options;
+let selected = ~.Parameters.Input.SelectedOptions;
+let all = [];
+for (let i = 0; i < options.length; i++){
+ let checked = false;
+ if (selected.findIndex((item) => item.value == options[i].value) > -1) {
+  checked = true;
+ }
+ let ob = {"text":options[i].text,"value":options[i].value,"checked":checked};
+ all.push(ob);
+}
+return all;
+```
+6. Drag a *SetValue* action under the *Javascript* action
+   1. Target: Select the output parameter *AllOptions* (= ~.Parameters.Output.AllOptions)
+   2. Value: Select the Javascript action in the dropdown (= ~.JavaScript)
+
+## Page Setup
+1. Drag a *CheckBoxList* control into the page
+2. Use the *Options* property to populate the *CheckBoxList* with data
+3. Drag a *Button* control under the CheckBoxList
+4. Create the *Button.Click* event handler
+
+## Button.Click Event Handler Setup
+1. Drag the "FullCheckBoxList" script into the event script
+2. Populate the Input Parameters 
+   1. SelectedOptions: Select the *SelectedOptions* property of your checkbox list in the dropdown
+   2. Options: Select the *Options* property of your checkbox list in the dropdown
+3. Use the list returned by the script using a *ForEach* to get every checkbox object separately
+
+![](images/ScriptInputParameters.png)
