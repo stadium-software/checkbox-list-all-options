@@ -2,6 +2,8 @@
 
 Stadium returns lists of options and SelectedOptions from Checkbox List controls, but sometimes you may want to get a list of all options back. This module provides a script that returns one list of selected and not selected options. 
 
+https://github.com/stadium-software/checkbox-list-all-options/assets/2085324/46f203a4-f118-4d16-b2a5-d8763d2c7b7a
+
 ## Type Setup
 1. Create a type and call it "CheckBoxItem"
 2. Add three properties to the type
