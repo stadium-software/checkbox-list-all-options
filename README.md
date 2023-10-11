@@ -35,13 +35,15 @@ return all;
 ![](images/SetValueProp.png)
 
 ## Page Setup
+The "FullCheckBoxList" script can be executed in any other script. this example uses a Button Click event to illustrate how to execute the script when the user clicks a button
+
 1. Drag a *CheckBoxList* control into the page
 2. Use the *Options* property to populate the *CheckBoxList* with data
 3. Drag a *Button* control under the CheckBoxList
 4. Create the *Button.Click* event handler
 
 ## Button.Click Event Handler Setup
-The script can be executed in any other script. The example in this sample shows what the script returns and how to loop through it. 
+The example in this sample shows what the script returns and how to loop through it. 
 
 1. Drag the "FullCheckBoxList" script into the event script
 2. Populate the Input Parameters 
