@@ -32,6 +32,8 @@ return all;
    1. Target: Select the output parameter *AllOptions* (= ~.Parameters.Output.AllOptions)
    2. Value: Select the Javascript action in the dropdown (= ~.JavaScript)
 
+![](images/SetValueProp.png)
+
 ## Page Setup
 1. Drag a *CheckBoxList* control into the page
 2. Use the *Options* property to populate the *CheckBoxList* with data
