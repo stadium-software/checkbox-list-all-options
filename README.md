@@ -14,7 +14,7 @@ https://github.com/stadium-software/checkbox-list-all-options/assets/2085324/46f
    1. AllOptions
 4. Drag a *Javascript* action into the script 
 5. Paste the Javascript below into the *code* property (ignore the error "Invalid script was detected" in Stadium)
-```
+```html
 let options = ~.Parameters.Input.Options;
 let selected = ~.Parameters.Input.SelectedOptions;
 let all = [];
