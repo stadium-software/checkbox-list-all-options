@@ -4,6 +4,9 @@ Stadium returns a list of all the Options and of the SelectedOptions from Checkb
 
 https://github.com/stadium-software/checkbox-list-all-options/assets/2085324/46f203a4-f118-4d16-b2a5-d8763d2c7b7a
 
+## Sample applications
+This repo contains one Stadium 6.7 application
+[FullCheckboxList.sapz](Stadium6/FullCheckboxList.sapz?raw=true)
 
 ## Global Script Setup
 1. Create a Global Script and call it "FullCheckBoxList"
