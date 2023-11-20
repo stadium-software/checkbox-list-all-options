@@ -4,6 +4,9 @@ Stadium returns a list of all the Options and of the SelectedOptions from Checkb
 
 https://github.com/stadium-software/checkbox-list-all-options/assets/2085324/46f203a4-f118-4d16-b2a5-d8763d2c7b7a
 
+## Version 
+1.0
+
 ## Sample applications
 This repo contains one Stadium 6.7 application
 [FullCheckboxList.sapz](Stadium6/FullCheckboxList.sapz?raw=true)
@@ -18,6 +21,7 @@ This repo contains one Stadium 6.7 application
 4. Drag a *Javascript* action into the script 
 5. Paste the Javascript below into the *code* property (ignore the error "Invalid script was detected" in Stadium)
 ```javascript
+/*Stadium Script Version 1.0*/
 let options = ~.Parameters.Input.Options;
 let selected = ~.Parameters.Input.SelectedOptions;
 let all = [];
