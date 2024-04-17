@@ -5,7 +5,7 @@ Stadium returns a list of all the Options and of the SelectedOptions from Checkb
 https://github.com/stadium-software/checkbox-list-all-options/assets/2085324/46f203a4-f118-4d16-b2a5-d8763d2c7b7a
 
 ## Version 
-1.0
+1.1 - removed script error
 
 ## Sample applications
 This repo contains one Stadium 6.7 application
@@ -21,13 +21,16 @@ This repo contains one Stadium 6.7 application
 4. Drag a *Javascript* action into the script 
 5. Paste the Javascript below into the *code* property (ignore the error "Invalid script was detected" in Stadium)
 ```javascript
-/* Stadium Script Version 1.0 https://github.com/stadium-software/checkbox-list-all-options */
+/* Stadium Script Version 1.1 https://github.com/stadium-software/checkbox-list-all-options */
 let options = ~.Parameters.Input.Options;
 let selected = ~.Parameters.Input.SelectedOptions;
 let all = [];
+let getIndex = (option) => {
+    return selected.findIndex((item) => item.value == option.value);
+};
 for (let i = 0; i < options.length; i++){
  let checked = false;
- if (selected.findIndex((item) => item.value == options[i].value) > -1) {
+ if (getIndex(options[i]) > -1) {
   checked = true;
  }
  let ob = {"text":options[i].text,"value":options[i].value,"checked":checked};
