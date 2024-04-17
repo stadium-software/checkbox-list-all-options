@@ -7,10 +7,6 @@ https://github.com/stadium-software/checkbox-list-all-options/assets/2085324/46f
 ## Version 
 1.1 - removed script error
 
-## Sample applications
-This repo contains one Stadium 6.7 application
-[FullCheckboxList.sapz](Stadium6/FullCheckboxList.sapz?raw=true)
-
 ## Global Script Setup
 1. Create a Global Script and call it "FullCheckBoxList"
 2. Add the two *Input Parameters* to the script
