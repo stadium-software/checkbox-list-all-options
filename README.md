@@ -27,7 +27,7 @@ let getIndex = (option) => {
 for (let i = 0; i < options.length; i++){
  let checked = false;
  if (getIndex(options[i]) > -1) {
-  checked = true;
+   checked = true;
  }
  let ob = {"text":options[i].text,"value":options[i].value,"checked":checked};
  all.push(ob);
